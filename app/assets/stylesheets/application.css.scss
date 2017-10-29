@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'normalize';
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 7em 0 0 0;
+  border-right: 1px solid gray;
+  #logo {
+    width: 40px;
+    position: absolute;
+    right: 3em;
+    top: 3em;
+  }
+}
+
+.page-wrapper {
+  padding: 3em;
+  margin-left: 300px;
+}
