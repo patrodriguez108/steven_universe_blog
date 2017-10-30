@@ -1,4 +1,4 @@
-<div class="page-wrapper">
+<div class="post-wrapper">
 
   <h1 class="title">
     <%= @post.title %>
@@ -18,9 +18,10 @@
   </p>
 
   <div id="comments">
-    <h2><%= @post.comments.count %> Comments</h2>
+    <h2 class="title"><%= @post.comments.count %> Comments</h2>
+    <p class="body">
     <%= render @post.comments %>
-
+    </p>
     <h3>Add a comment</h3>
     <%= render 'comments/form' %>
   </div>
