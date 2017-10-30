@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   root "posts#index"
 
   get '/about', to: 'pages#about'
+
+  get 'signup' => 'users#new'
+  post '/users' => 'users#create'
 end
