@@ -10,19 +10,21 @@
 
   <body>
     <div id="sidebar">
-      <div id="logo">
-
-      </div>
+    <div id="logo">
+      <%= link_to root_path do %>
+        <%= image_tag("steven-universe-logo.svg", height: '65.1', width: '220') %>
+      <% end %>
+    </div>
       <ul>
         <li class="category">Website</li>
         <li><%= link_to "Blog", root_path %></li>
         <li><%= link_to "About", about_path %></li>
                 <% if current_user %>
-        Signed in as <%= current_user.name %>
-        | <%= link_to "Logout", '/logout' %>
+        <li>Signed in as <%= current_user.name %></li>
+        <li><%= link_to "Logout", '/logout' %></li>
         <% else %>
-        <%= link_to 'Login', '/login' %>
-        | <%= link_to 'Signup', '/signup' %>
+        <li><%= link_to 'Login', '/login' %></li>
+        <li><%= link_to 'Signup', '/signup' %></li>
         <% end %>
       </ul>
 
