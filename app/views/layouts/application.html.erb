@@ -17,6 +17,13 @@
         <li class="category">Website</li>
         <li><%= link_to "Blog", root_path %></li>
         <li><%= link_to "About", about_path %></li>
+                <% if current_user %>
+        Signed in as <%= current_user.name %>
+        | <%= link_to "Logout", '/logout' %>
+        <% else %>
+        <%= link_to 'Login', '/login' %>
+        | <%= link_to 'Signup', '/signup' %>
+        <% end %>
       </ul>
 
       <p class="sign-in">Admin Login</p>
@@ -24,7 +31,13 @@
 
     <div id="main-content">
       <div id="header">
-        <button class="button">Log Out</button>
+        <% if current_user %>
+        Signed in as <%= current_user.name %>
+        | <%= link_to "Logout", '/logout' %>
+        <% else %>
+        <%= link_to 'Login', '/login' %>
+        | <%= link_to 'Signup', '/signup' %>
+        <% end %>
       </div>
       <%= yield %>
     </div>
