@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/posts/:post_id/comments', to: 'comments#index', as: 'post_comments'
   get '/posts/:post_id/comments/new', to: 'comments#new'
   post '/posts/:post_id/comments', to: 'comments#create'
-
+  
 
   root "posts#index"
 
